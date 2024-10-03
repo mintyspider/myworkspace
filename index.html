@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="./notes_images/notes.png">
+        <title>Рабочий стол</title>
+    </head>
+    <body>
+        <div class="stopwatch">
+            <h1 id="displayTime">00:00:00</h1>
+            <div class="buttons">
+                <img src="./stopwatch_images/stop.png" onclick="watchstop()">
+                <img src="./stopwatch_images/start.png" onclick="watchstart()">
+                <img src="./stopwatch_images/reset.png" onclick="watchreset()">
+            </div>
+        </div>
+        <div class="content">
+            <div class="notes_container">
+                <h1><img src="./notes_images/notes.png"> Notes</h1>
+                <button class="btn"><img src="./notes_images/edit.png">Create Notes</button>
+                <div class="notes-container"></div>
+            </div>
+            <div class="todo_container">
+                <div class="todo-app">
+                    <h2>To-Do List <img src="./todo_images/icon.png"></h2>
+                    <div class="row">
+                        <input type="text" id="input-b" placeholder="Add your text">
+                        <button onclick="addTask()">Add</button>
+                    </div>
+                    <ul id="list-container">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../scripts/todo_script.js"></script>
+        <script src="../scripts/notes_script.js"></script>
+        <script src="../scripts/stopwatch_script.js"></script>
+    </body>
+</html>
